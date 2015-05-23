@@ -10,7 +10,7 @@ https://angular.github.io/protractor/ - testing framework built on selenium and 
 other useful technologies:
 http://getbootstrap.com/2.3.2/ - twitter bootstrap, a web development framework for easy addition of common web elements
 
-what to install:
+what to install locally on your computer:
 install node.js: https://nodejs.org/
 install mongoDb: https://www.mongodb.org/
 install protractor: https://angular.github.io/protractor/
