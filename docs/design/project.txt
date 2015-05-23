@@ -1,0 +1,22 @@
+the acm website project goal statement
+
+our intent is to produce in code a simple content management system for our student group website.  while there are many products freely available that provide this platform, we feel this project is within our capacity as coders, and serves our need to build relevant experience in system design, coding, and teamwork.
+
+we are build a website with the following pages/functions:
+- landing page with news feed
+- company portal for business contacts and easy contact form aggregation
+ - shows list of events that can be funded/supported
+- list of officers/contact us page
+- previous events page
+ - shows list of events that have occurred, presented with images
+- back-end content management admin interface
+ - article composing (title, content, associated media)
+ - image upload to database (with metadata like date, title, tags)
+ - edit article
+ - delete article
+ - manage admin users
+ - manage org list (member name, role, image)
+
+the technologies used to build this platform are listed in the docs/design/readme.txt file.
+the project is managed by the group on our project management page: [link-to-project-management-page]
+this is a living document.  it should be extended, or possibly rewritten using a drawing program.  there should only be one file with the living current project goal.
