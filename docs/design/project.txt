@@ -1,6 +1,9 @@
 the acm website project goal statement
 
-our intent is to produce in code a simple content management system for our student group website.  while there are many products freely available that provide this platform, we feel this project is within our capacity as coders, and serves our need to build relevant experience in system design, coding, and teamwork.
+our intent is to produce in code a simple content management system for our student group website.  
+while there are many products freely available that provide this platform, we feel this project is 
+within our capacity as coders, and serves our need to build relevant experience in system design, 
+coding, and teamwork.
 
 we are build a website with the following pages/functions:
 - landing page with news feed
