@@ -1,0 +1,9 @@
+To initialize the server:
+1. Open an npm enabled command line (node.js command prompt)
+2. Go to this directory
+3. Type "npm install"
+
+To run the server
+1. Open node.js command prompt
+2. Go to this directory
+3. Type "node server.js"
