@@ -1,0 +1,45 @@
+Feature: A list of events can be pulled with a GET call
+	As a web developer, I would like to be able to get a list of all events
+	
+	Scenario 1: Developer accesses /event with GET
+		Given the server is running
+		And events exist in the API
+		And the developer has access to the /event API
+		When the user sends a GET http request to the API
+		Then a JSON array of all event objects should be return over HTTP
+		And the server will issue a 200 message response
+		And the call is idempotent
+
+	Scenario 2: Developer accesses /event/{event-id} with GET
+		Given the server is running
+		And {event-id} is an id of an event in the collection
+		And the developer has access to the /event API
+		When the user sends a GET http request to the API with a specific event id
+		Then A JSON object of that event will be returned over HTTP response
+		And the server will issue a 200 message response
+		And the call is idempotent
+
+	Scenario 3: Developer attempts to access /event/{event-id} for an event that doesn't exist with GET
+		Given the server is running
+		And the developer has access to the /event API
+		And {event-id} is an id of an event not in the collection
+		When the user sends a GET HTTP request to the API with a specific event id
+		Then the server will issue a 400 message
+		And the server will issue an error JSON response body
+		And the call is idempotent
+
+	Scenario 4: Developer attempts to access /event without access permission
+		Given the server is running
+		And the developer does not have access to the /event API
+		When the developer sends a GET call to the /event API
+		Then the server will issue a 401 message
+		And the server will issue an error JSON response body
+		And the call is idempotent
+
+	Scenario 5: Developer attempts to access /event/{event-id} without access permission
+		Given the server is running
+		And the developer does not have access to the /event API
+		When the developer sends a GET call to the /event API
+		Then the server will issue a 401 message
+		And the server will issue an error JSON response body
+		And the call is idempotent
