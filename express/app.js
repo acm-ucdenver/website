@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/events');
@@ -22,8 +23,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Logging Initialization
+// ----------------------
+// create a write stream (in append mode)
+var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+
+// setup the logger
+app.use(logger('combined', {stream: accessLogStream}));
+// ----------------------
+
+
+// Routes
+// ----------------------
 app.use('/', routes);
 app.use('/events', users);
+// ----------------------
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
