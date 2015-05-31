@@ -5,7 +5,8 @@
     "body-parser": "~1.0.1",
     "express": "^4.0.0",
     "mongoose": "~3.6.13",
-	"cucumber": "^0.4.9"
+	"cucumber": "^0.4.9",
+	"log4js": "^0.6.25"
   },
   "repository": {
     "type": "git",
