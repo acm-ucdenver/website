@@ -1,7 +1,4 @@
 node_modules/
 bower_components/
-<<<<<<< HEAD
-express/logs
-=======
 .DS_Store
->>>>>>> feature/server-logging
+express/access.log
