@@ -1,4 +1,4 @@
 node_modules/
 bower_components/
 .DS_Store
-express/access.log
+access.log
