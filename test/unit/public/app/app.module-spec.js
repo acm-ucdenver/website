@@ -1,0 +1,1 @@
+// test of site/public/app/app.module.js
