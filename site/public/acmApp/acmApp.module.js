@@ -4,4 +4,4 @@
 
 // add dependencies
 
-var app = angular.module('app', [ ]);
+var acmApp = angular.module('acmApp', [ ]);
