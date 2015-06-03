@@ -1,9 +1,10 @@
 // test that things are cool
 
+
 describe('Hello', function() {
 
     beforeEach(function() {
-        browser.get('');
+       // browser.get('');
     })
 
     it('should find the body tag', function() {
