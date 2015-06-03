@@ -38,8 +38,14 @@ sudo npm install protractor -g
 echo 'Installing Bower'
 sudo npm install bower -g
 
+echo 'Updating Selenium Webserver'
+sudo webdriver-manager update
+
 echo 'Installing node project packages'
-sudo npm install site/
+cd site
+npm install
 
 echo 'Installing angular project packages'
-sudo bower install public/js/
+cd public
+cd js
+bower install
