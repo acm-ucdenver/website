@@ -1,2 +1,2 @@
 sudo webdriver-manager update
-webdriver-manager start
+sudo webdriver-manager start
