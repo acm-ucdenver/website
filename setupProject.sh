@@ -26,7 +26,6 @@ else [ $UNAME == "Linux" ]
 	echo 'Installing NPM'
 	sudo apt-get install npm
 
-
 fi
 
 echo 'Installing Karma'
@@ -42,10 +41,9 @@ echo 'Updating Selenium Webserver'
 sudo webdriver-manager update
 
 echo 'Installing node project packages'
-cd site
-npm install
+mkdir ./site/node_modules
+npm install --prefix ./site/node_modules ./site
 
 echo 'Installing angular project packages'
-cd public
-cd js
+cd ./site/public/js/
 bower install
