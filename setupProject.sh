@@ -15,6 +15,9 @@ if [ $UNAME == "Darwin" ]; then
 	echo 'Installing NPM'
 	sudo brew install npm
 
+	echo 'Installing MongoDB'
+	sudo brew install mongodb
+
 
 else [ $UNAME == "Linux" ]
 	echo 'Installing git'
@@ -25,6 +28,9 @@ else [ $UNAME == "Linux" ]
 
 	echo 'Installing NPM'
 	sudo apt-get install npm
+
+	echo 'Installing MongoDB'
+	sudo apt-get install mongodb
 
 fi
 
