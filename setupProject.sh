@@ -45,5 +45,4 @@ mkdir ./site/node_modules
 npm install --prefix ./site/node_modules ./site
 
 echo 'Installing angular project packages'
-cd ./site/public/js/
 bower install
