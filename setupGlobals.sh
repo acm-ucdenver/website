@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# a one-time installer of global dependencies
+
 UNAME=$(uname -s)
 
 if [ $UNAME == "Darwin" ]; then
@@ -45,10 +47,3 @@ sudo npm install bower -g
 
 echo 'Updating Selenium Webserver'
 sudo webdriver-manager update
-
-echo 'Installing node project packages'
-mkdir ./site/node_modules
-npm install --prefix ./site/node_modules ./site
-
-echo 'Installing angular project packages'
-bower install
