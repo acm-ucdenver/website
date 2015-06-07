@@ -5,13 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var users = require('./routes/events');
+var users = require('./routes/users');
 
 var app = express();
 
-// view engine setup
+// view engine setup (doesn't apply to angular templates)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -33,10 +34,10 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 
 
-// Routes
+// Routes (a few examples, we will remove these)
 // ----------------------
 app.use('/', routes);
-app.use('/events', users);
+app.use('/users', users);
 // ----------------------
 
 // catch 404 and forward to error handler
@@ -44,6 +45,15 @@ app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+});
+
+// mongodb database setup using mongoosejs
+// http://mongoosejs.com/docs/index.html
+mongoose.connect('mongodb://localhost/acm');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: could not connect to mongodb database "acm"'));
+db.once('open', function (callback) {
+  console.log('connected to mongodb database "acm"');
 });
 
 // error handlers
