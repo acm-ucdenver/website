@@ -2,23 +2,15 @@ doctype html
 html(ng-app="acmApp")
 	head
 		title= title
-		// meta tags for twitter bootstrap basic template
-		meta(charset='utf-8')
-		meta(http-equiv='X-UA-Compatible' content="IE=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		// our app's own stylesheet
 		link(rel='stylesheet', href='/css/app.css')
-		// twitter bootstrap css component
-		link(rel='stylesheet', href='/js/bower_components/bootstrap/dist/css/bootstrap.min.css')
+		
+		h1= title
+		//p Welcome to #{title}
+		
 	body
-		
 		block content
-		
-		// jquery javascript library
-		script(src='/js/bower_components/jquery/dist/jquery.min.js')
-		// twitter bootstrap javascript component
-		script(src='/js/bower_components/bootstrap/dist/css/bootstrap.min.css')
-		// angular js
+		div(ng-controller='EventsController as eCtl')
+			table(event-view ng-repeat='event in eCtl.events')
 		script(src='/js/bower_components/angular/angular.min.js')
-		// our angular app
 		script(src='/acmApp/acmApp.module.js')
+		script(src='/acmApp/components/events/EventsController.js')
