@@ -27,7 +27,10 @@ angular.module('acmApp')
 				imgs: [
 					{
 						src: 'Address of image'
-					}
+					},
+                    {
+                        src: 'address of image 2'
+                    }
 				]
 			}
 		];

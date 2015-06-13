@@ -11,7 +11,7 @@ describe('', function() {
         // put mock of event object into database
 
         beforeEach(function() {
-            // driver.get('/site/address');
+            // browser.get('/site/address');
         });
         
         it('should pass a JSON array of all event objects over HTTP', function() {
