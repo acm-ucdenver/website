@@ -80,7 +80,11 @@ describe('As a student, I would like to see upcoming events on the index page', 
                             .then(function(rsvp) {
                                 expect(rsvp).not.toBe(null);
                             });
-                        expect(element.all(by.binding('event.imgs.src')).count()).not.toEqual(0);
+                        element(by.binding('event.img'))
+                            .getText()
+                            .then(function(img) {
+                                expect(img).not.toBe(null);
+                            });
                     }
                 } else {
                     console.log('\nNOTE: there were no events; scenario 2 not exercised.');   
