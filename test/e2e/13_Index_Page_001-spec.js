@@ -80,7 +80,7 @@ describe('As a student, I would like to see upcoming events on the index page', 
                             .then(function(rsvp) {
                                 expect(rsvp).not.toBe(null);
                             });
-                        element(by.binding('event.img'))
+                        element(by.binding('event.image'))
                             .getText()
                             .then(function(img) {
                                 expect(img).not.toBe(null);
