@@ -1,15 +1,3 @@
-var chai     = require('chai');
-var promised = require('chai-as-promised');
-chai.use(promised) 
-var expect   = chai.expect;
-
-/*
-	These are gonna be full of:
-	browser.get('/api/events');
-	calls of some kind
-*/
-
-
 // Suite
 describe('getEventAPI', function() {
 	describe('authorized GET /event calls', function() {
