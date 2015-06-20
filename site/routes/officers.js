@@ -34,7 +34,7 @@ router.route('/')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Officer created' });
+            res.json({ message: 'Success' });
         });
     });
 
@@ -65,7 +65,7 @@ router.route('/:id')
                 if (err)
                     return err;
 
-                res.json({ message: 'Officer updated' });
+                res.json({ message: 'Success' });
             });
         });
     })
@@ -75,7 +75,7 @@ router.route('/:id')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Officer successfully deleted' });
+            res.json({ message: 'Success' });
         });
     });
 
