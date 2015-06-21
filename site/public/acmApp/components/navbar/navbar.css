@@ -1,0 +1,8 @@
+.navbar {
+    height: 100px;
+    width: 100%;
+    background: -webkit-linear-gradient(white, gray);
+    background: -o-linear-gradient(white, gray);
+    background: -moz-linear-gradient(white, gray);
+    background: linear-gradient(white, gray);
+}
