@@ -38,7 +38,6 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 app.use('/', routes);
 app.use('/users', users);
-app.use('*', routes);
 // ----------------------
 
 // catch 404 and forward to error handler
