@@ -8,9 +8,13 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var officers = require('./routes/officers');
 
 var app = express();
+
+// Configure body parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // view engine setup (doesn't apply to angular templates)
 app.set('views', path.join(__dirname, 'views'));
@@ -36,8 +40,8 @@ app.use(logger('combined', {stream: accessLogStream}));
 
 // Routes (a few examples, we will remove these)
 // ----------------------
+app.use('/officers', officers);
 app.use('/', routes);
-app.use('/users', users);
 // ----------------------
 
 // catch 404 and forward to error handler
@@ -79,6 +83,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
