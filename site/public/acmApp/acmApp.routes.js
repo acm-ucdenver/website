@@ -30,7 +30,7 @@ acmApp.config(['$stateProvider', function($stateProvider) {
         url: "/contact",
         views: {
             'content': {
-                templateUrl: 'partials/contacts.html',
+                templateUrl: 'partials/contact.html',
                 controller: 'ContactsController'
             },
             'navbar': {
