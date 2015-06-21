@@ -2,11 +2,11 @@ acmApp.controller('NavBarController', ['$scope', function ($scope) {
     $scope.items = [
                         {
                             title: "Main",
-                            state: "main.index"
+                            state: "index.main"
                         },
                         {
                             title: "Contact",
-                            state: "contacts"
+                            state: "contact"
                         }
                     ];
 }]);

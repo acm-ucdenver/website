@@ -6,7 +6,8 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
                 templateUrl: 'acmApp/partials/index.html',
             },
             'navbar': {
-                templateUrl: 'acmApp/shared/navBar/navbar.html',
+                templateUrl: 'acmApp/components/navbar/navbar.html',
+                controller: 'NavBarController'
             }
         }
     })
@@ -30,7 +31,8 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
                 templateUrl: 'acmApp/partials/contact.html',
             },
             'navbar': {
-                templateUrl: 'acmApp/shared/navBar/navbar.html',
+                templateUrl: 'acmApp/components/navbar/navbar.html',
+                controller: 'NavBarController'
             }
         }
     });
