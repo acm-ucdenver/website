@@ -1,6 +1,42 @@
-// dummy javascript file
+acmApp.config(['$stateProvider', function($stateProvider) {
+    $stateProvider.state('index', {
+        url: "",
+        views: {
+            'content': { 
+                templateUrl: 'partials/index.html',
+            },
+            'navbar': {
+                templateUrl: 'partials/navbar.html',
+                controller: 'NavBarController'
+            }
+        }
+    })
+    .state('index.main', {
+        url: "/index",
+        views: {
+            'events': { 
+                templateUrl: 'partials/events.html',
+                controller: 'EventsController'
+            },
+            'announcements': {
+                templateUrl: 'partials/announcements.html',
+                controller: 'AnnouncementsController'
+            }
+        }
+    });
 
-// https://docs.angularjs.org/api/ngRoute/service/$route
 
-// routes to the various pages in the components directory
-
+    $stateProvider.state('contact', {
+        url: "/contact",
+        views: {
+            'content': {
+                templateUrl: 'partials/contacts.html',
+                controller: 'ContactsController'
+            },
+            'navbar': {
+                templateUrl: 'partials/navbar.html',
+                controller: 'NavBarController'
+            }
+        }
+    });
+}]);
