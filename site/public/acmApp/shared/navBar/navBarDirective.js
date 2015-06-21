@@ -1,1 +1,3 @@
-// dummy javascript file
+angular
+	.module('acmApp')
+	.directive('NavBarDirective', function(){});

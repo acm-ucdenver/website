@@ -6,19 +6,20 @@ html(ng-app="acmApp")
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible' content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1")
+        base(href="/")
 
         //- CSS
         link(rel='stylesheet', href='/css/app.css')
-        link(rel='stylesheet', href='/js/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/js/bower_components/bootstrap/dist/css/bootstrap.css')
 
     body
         
         block content
         
         //- Libraries
-        script(src='/js/bower_components/jquery/dist/jquery.min.js')
-        script(src='/js/bower_components/angular/angular.min.js')
-        script(src='/js/bower_components/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='/js/bower_components/jquery/dist/jquery.js')
+        script(src='/js/bower_components/angular/angular.js')
+        script(src='/js/bower_components/angular-ui-router/release/angular-ui-router.js')
 
         //- App
         script(src='/acmApp/acmApp.module.js')

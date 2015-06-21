@@ -1,13 +1,12 @@
-acmApp.config(['$stateProvider', function($stateProvider) {
+acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
     $stateProvider.state('index', {
         url: "",
         views: {
             'content': { 
-                templateUrl: 'partials/index.html',
+                templateUrl: 'acmApp/partials/index.html',
             },
             'navbar': {
-                templateUrl: 'partials/navbar.html',
-                controller: 'NavBarController'
+                templateUrl: 'acmApp/shared/navBar/navbar.html',
             }
         }
     })
@@ -15,13 +14,11 @@ acmApp.config(['$stateProvider', function($stateProvider) {
         url: "/index",
         views: {
             'events': { 
-                templateUrl: 'partials/events.html',
-                controller: 'EventsController'
+                templateUrl: 'acmApp/components/events/events.html',
             },
             'announcements': {
-                templateUrl: 'partials/announcements.html',
-                controller: 'AnnouncementsController'
-            }
+                templateUrl: 'acmApp/components/announcements/announcements.html',
+            },
         }
     });
 
@@ -30,13 +27,13 @@ acmApp.config(['$stateProvider', function($stateProvider) {
         url: "/contact",
         views: {
             'content': {
-                templateUrl: 'partials/contact.html',
-                controller: 'ContactsController'
+                templateUrl: 'acmApp/partials/contact.html',
             },
             'navbar': {
-                templateUrl: 'partials/navbar.html',
-                controller: 'NavBarController'
+                templateUrl: 'acmApp/shared/navBar/navbar.html',
             }
         }
     });
+
+    $locationProvider.html5Mode(true);
 }]);
