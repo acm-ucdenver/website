@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var AnnouncementSchema = new Schema({
+var ArticleSchema = new Schema({
     createdDate: Date,
     modifiedDate: Date,
     author: String,
@@ -11,4 +11,4 @@ var AnnouncementSchema = new Schema({
     imgs: [ { src: String }]
 });
 
-module.exports = mongoose.model('Articles', AnnouncementSchema)
+module.exports = mongoose.model('Article', ArticleSchema)
