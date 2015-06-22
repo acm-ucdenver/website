@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var officers = require('./routes/officers');
+var announcement = require('./routes/articles');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use(logger('combined', {stream: accessLogStream}));
 // Routes (a few examples, we will remove these)
 // ----------------------
 app.use('/officers', officers);
+app.use('/articles', articles);
 app.use('/', routes);
 // ----------------------
 
