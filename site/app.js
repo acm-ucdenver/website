@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var announcement = require('./routes/announcement');
+var announcement = require('./routes/articles');
 
 var app = express();
 
@@ -39,7 +39,7 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 app.use('/', routes);
 app.use('/users', users);
-app.use('/announcement', announcement);
+app.use('/articles', articles);
 // ----------------------
 
 // catch 404 and forward to error handler
