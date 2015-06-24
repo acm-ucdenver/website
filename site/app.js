@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var officers = require('./routes/officers');
-var announcement = require('./routes/articles');
+var articles = require('./routes/articles');
 
 var app = express();
 
