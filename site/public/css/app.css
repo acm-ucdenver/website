@@ -1,1 +1,27 @@
-/* dummy css */
+html {
+    height: 100%;
+    overflow-y: hidden;
+}
+body {
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    left: 0;
+
+    // Temporary, just so we can see where each component is
+    border: black solid 1px;
+
+}
+
+.content {
+    width: 80%;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+
+}
+
