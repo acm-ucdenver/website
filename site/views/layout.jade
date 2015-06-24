@@ -2,10 +2,6 @@ doctype html
 html(ng-app="acmApp")
     head
         title= title
-        // meta tags for twitter bootstrap basic template
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible' content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
         base(href="/")
 
         //- CSS
@@ -17,7 +13,6 @@ html(ng-app="acmApp")
         block content
         
         //- Libraries
-        script(src='/js/bower_components/jquery/dist/jquery.js')
         script(src='/js/bower_components/angular/angular.js')
         script(src='/js/bower_components/angular-ui-router/release/angular-ui-router.js')
 
@@ -26,3 +21,8 @@ html(ng-app="acmApp")
 
         //- Routes
         script(src='/acmApp/acmApp.routes.js')
+
+        //- Controllers
+        script(src='/acmApp/components/navbar/NavBarController.js')
+        script(src='/acmApp/components/announcements/AnnouncementsController.js')
+        script(src='/acmApp/components/events/EventsController.js')
