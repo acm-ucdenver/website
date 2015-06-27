@@ -1,6 +1,10 @@
 angular
 	.module('acmApp')
-	.controller('ArticlesController', ['$scope', 'Article', function($scope, Article) {
-  		$scope.articles = Article.query();	// Get all articles
-}]);
+	.controller('ArticlesController', ['$scope', '$http', function($scope, $http){
+		// Get all articles
+		$http.get('http://localhost:3000/articles')
+	        .success(function(data) {
+	            $scope.articles = data;
+	        });
+	}]);
 	
