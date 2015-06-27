@@ -18,7 +18,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
                 templateUrl: 'acmApp/components/events/events.html',
             },
             'announcements': {
-                templateUrl: 'acmApp/components/announcements/announcements.html',
+                templateUrl: 'acmApp/components/announcements/articles.html',
             },
         }
     });
