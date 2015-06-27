@@ -1,3 +1,3 @@
 angular
 	.module('acmApp')
-	.directive('AnnouncementsDirective', function(){});
+	.directive('ArticlesDirective', function(){});
