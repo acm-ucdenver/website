@@ -1,0 +1,1 @@
+{ "event": "Field Trip", "img": "fieldtrip.jpg", "description": "We come and check out your place.", "activities": [ { "name": "mock interviews" }, { "name": "watch a scrum meeting" } ], "expenses": [ { "name": "catering" }, { "name": "travel" } ],  "cost": 123456.78 }
