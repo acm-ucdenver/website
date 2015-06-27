@@ -6,3 +6,4 @@ angular
 			query: {method:'GET', params:{articleId:'articles'}, isArray:true}
 		});
 	}]);
+	
