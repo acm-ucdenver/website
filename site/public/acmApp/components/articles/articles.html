@@ -8,7 +8,7 @@
 		<!-- Print the subject/title, author, date, and body of each article
 			Does not print the "modifiedDate" or  "imgs" fields-->
 		<li ng-repeat="article in articles">
-			"{{ article.subject }}"  by {{ article.author }} on {{ article.createdDate }} 
+			"{{ article.subject }}"  by {{ article.author }} on {{ article.createdDate | date }} 
 			</br>
 			{{ article.body }}
 		</li>
