@@ -71,9 +71,9 @@ router.route('/:id')
 	})
 
 	.delete(function(req, res, next) {
-		Project.remove({_id: req.params.id}, function(err, user) {
+		Project.remove({_id: req.params.id}, function(err, project) {
 			if(err)
-				res. send(err);
+				res.send(err);
 
 			res.json({message: 'Success'});
 		});
