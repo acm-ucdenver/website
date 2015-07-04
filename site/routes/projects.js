@@ -54,29 +54,38 @@ router.route('/:id')
 			if(err)
 				res.send(err);
 
-			project.title = req.body.title;
-			project.desc = req.body.desc;
-			project.date = req.body.date;
-			project.contr = req.body.contr;
-			project.links = req.body.links;
-			project.tags = req.body.tags;
+			if(project != null) {
+				project.title = req.body.title;
+				project.desc = req.body.desc;
+				project.date = req.body.date;
+				project.contr = req.body.contr;
+				project.links = req.body.links;
+				project.tags = req.body.tags;
 
-			project.save(function(err) {
-				if(err)
-					res.send(err);
+				project.save(function(err) {
+					if(err)
+						res.send(err);
 
-				res.json({message: 'Success'});
-			});
+					res.json({message: 'Success'});
+				});
+			}
+
+			res.json({error:"Project does not exist"});
 		});
 	})
 
 	.delete(function(req, res, next) {
-		Project.remove({_id: req.params.id}, function(err, project) {
-			if(err)
-				res.send(err);
+		Project
+			.findByIdAndRemove({_id: req.params.id}, function(err, project) {
+				if(err)
+					res.send(err);
 
-			res.json({message: 'Success'});
-		});
+				if (project == null)
+					res.json({error : "Project does not exist"});
+
+				else
+					res.json({message: 'Success'});
+			});
 	});
 
 module.exports = router;
