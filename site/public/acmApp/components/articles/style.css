@@ -1,0 +1,36 @@
+.articleWrapper {
+    width: 800px;
+
+    padding: 10px 30px 10px 30px;
+    margin: 20px 0px 20px 0px;
+
+    background-color: #99e3c1;
+
+    border: solid black 1px;
+    border-radius: 15px 0px 15px 0px;
+}
+
+.articleSubject {
+    font-size: 35px;
+    width: 100%;
+
+    border-bottom: solid 1px black;
+}
+
+.articleAuthor {
+    font-size: 20px;
+
+    margin-top: 13px;
+    
+    float: right;
+
+    display: inline-block;
+}
+
+.articleCreateDate {
+    border-bottom: solid 1px black;
+}
+
+.articleBody {
+    margin: 15px 20px 15px 20px;
+}

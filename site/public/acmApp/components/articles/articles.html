@@ -1,16 +1,14 @@
-<!-- Include location of controller source file -->
-<script src="articlesController.js"></script>
-<div ng-controller="ArticlesController">
-	Announcements View
-	<p>A list of Announcements</p>
-	<!-- Articles in an unordered list -->
-	<ul>
-		<!-- Print the subject/title, author, date, and body of each article
-			Does not print the "modifiedDate" or  "imgs" fields-->
-		<li ng-repeat="article in articles">
-			"{{ article.subject }}"  by {{ article.author }} on {{ article.createdDate | date }} 
-			</br>
-			{{ article.body }}
-		</li>
-	</ul>
+<div ng-controller="ArticlesController as controller">
+
+        <div ng-repeat="article in controller.articles" class="articleWrapper">
+            <div class="articleSubject">
+                &#10097; {{ article.subject }} &#10096;
+                <div class="articleAuthor">{{ article.author }}</div>
+            </div>
+            <div class="articleCreateDate">{{ article.createdDate | date }}</div>
+            <div class="articleBody">
+                {{ article.body }}
+            </div>
+        </div>
+    </ul>
 </div>

@@ -1,10 +1,20 @@
-angular
-	.module('acmApp')
-	.controller('ArticlesController', ['$scope', '$http', function($scope, $http){
-		// Get all articles
-		$http.get('/articles')
-	        .success(function(data) {
-	            $scope.articles = data;
-	        });
-	}]);
-	
+(function () { 
+    'use strict';
+
+    angular.module('acmApp').controller('ArticlesController', ['$scope', '$log', 'ArticlesFactory', ArticlesController]);
+
+    function ArticlesController ($scope, $log, ArticlesFactory) {
+        var self = this;
+
+        self.articles = {};
+
+        $scope.$on('articlesLoaded', loadArticles);
+
+        function loadArticles() {
+            self.articles = ArticlesFactory.getArticles();
+
+        }
+
+        ArticlesFactory.loadArticles();
+    }
+})();

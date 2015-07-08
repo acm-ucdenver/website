@@ -4,6 +4,18 @@ html {
 }
 body {
     height: 100%;
+    font-family: 'Jura', sans-serif;
+}
+
+#header {
+    z-index: 3;
+
+    font-size: 35px;
+
+    position: absolute;
+    top: 0px;
+
+    margin-left: 70px;
 }
 
 .content {
@@ -12,6 +24,7 @@ body {
     padding-right: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 80px;
     height: 80%;
 
 }

@@ -6,12 +6,8 @@ html(ng-app="acmApp")
 
         //- CSS
         link(rel='stylesheet', href='/css/app.css')
-        link(rel='stylesheet', href='/js/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(href='http://fonts.googleapis.com/css?family=Jura:600', rel='stylesheet', type='text/css')
 
-    body
-        
-        block content
-        
         //- Libraries
         script(src='/js/bower_components/angular/angular.js')
         script(src='/js/bower_components/angular-ui-router/release/angular-ui-router.js')
@@ -23,6 +19,17 @@ html(ng-app="acmApp")
         script(src='/acmApp/acmApp.routes.js')
 
         //- Controllers
-        script(src='/acmApp/components/navbar/NavBarController.js')
-        script(src='/acmApp/components/articles/articlesController.js')
         script(src='/acmApp/components/events/EventsController.js')
+
+        //- Articles
+        script(src='/acmApp/components/articles/ArticlesController.js')
+        script(src='/acmApp/components/articles/ArticlesFactory.js')
+        link(rel='stylesheet', href='/acmApp/components/articles/style.css')
+
+        //- Navbar
+        script(src='/acmApp/components/navbar/NavBarController.js')
+        link(rel='stylesheet', href='/acmApp/components/navbar/style.css')
+
+    body
+        
+        block content
