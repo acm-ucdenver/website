@@ -1,8 +1,10 @@
-<div class="articleSubject">
-    &#10097; {{ info.subject }} &#10096;
-    <div class="articleAuthor">{{ info.author }}</div>
-</div>
-<div class="articleCreateDate">{{ info.createdDate | date }}</div>
-<div class="articleBody">
-    {{ info.body }}
+<div class="articleWrapper">
+    <div class="articleSubject">
+        &#10097; {{ info.subject }} &#10096;
+        <div class="articleAuthor">{{ info.author }}</div>
+    </div>
+    <div class="articleCreateDate">{{ info.createdDate | date }}</div>
+    <div class="articleBody">
+        {{ info.body }}
+    </div>
 </div>

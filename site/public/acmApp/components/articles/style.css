@@ -1,10 +1,12 @@
 .articleWrapper {
     width: 800px;
-
+    margin-right: 50px;
     padding: 10px 30px 10px 30px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     background-color: white;
+
+    overflow: hidden;
 }
 
 .articleSubject {
@@ -38,4 +40,6 @@
 
 .articleBody {
     margin: 15px 20px 15px 20px;
+
+    overflow: hidden;
 }

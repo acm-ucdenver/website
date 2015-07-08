@@ -1,14 +1,2 @@
-<div ng-controller="ArticlesController as controller">
-
-        <div ng-repeat="article in controller.articles" class="articleWrapper">
-            <div class="articleSubject">
-                &#10097; {{ article.subject }} &#10096;
-                <div class="articleAuthor">{{ article.author }}</div>
-            </div>
-            <div class="articleCreateDate">{{ article.createdDate | date }}</div>
-            <div class="articleBody">
-                {{ article.body }}
-            </div>
-        </div>
-    </ul>
-</div>
+<articleframe ng-repeat="article in controller.articles" info="article">
+</articleframe>
