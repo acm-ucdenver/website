@@ -10,9 +10,11 @@
             var original_height = 0;
             var height = 0;
 
+            console.log(element);
+
             $timeout(init, false);
             function init(){
-                original_height = element[0].offsetHeight;
+                original_height = element[0].lastElementChild.offsetHeight;
                 height = original_height;
             }
 
@@ -22,13 +24,17 @@
                     scope.info.body = full_text;
                     scope.$apply();
                     $interval(function () {
-                        height += (original_height-120)/27;
-                        element.css('height', height+'px'); 
+                        height += (original_height-50)/27;
+                        element[0].lastElementChild.style.setProperty('height', height+'px', null); 
                     }, 20, 27);
+                    $timeout(function() {
+                        element[0].lastElementChild.style.setProperty('border-bottom', 'none', null);
+                    }, 20*30);
                 } else {
+                    element[0].lastElementChild.style.setProperty('border-bottom', '1px solid black', null);
                     $interval(function () {
-                        height -= (original_height-120)/27;
-                        element.css('height', height+'px'); 
+                        height -= (original_height-50)/27;
+                        element[0].lastElementChild.style.setProperty('height', height+'px', null); 
                     }, 20, 27);
                     $timeout(function() {
                         scope.info.body = full_text.substring(0, 150) + "...";
