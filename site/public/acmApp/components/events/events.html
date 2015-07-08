@@ -1,7 +1,18 @@
-<!-- this is the complete listing of events past and present -->
+<!-- Include location of controller source file -->
+<script src="EventsController.js"></script>
+<div ng-controller="EventsController">Events View
+	<p>A list of Events</p>
+	Search: <input ng-model="query" type="text" />
+	<!-- Events in an unordered list -->
+	<ul>
+	<!-- Print the subject/title, location, date, and  for each article
+			Does not print the "endDate" or  "imgs" or RSVP fields-->
+	<li ng-repeat="event in events | filter: query | orderBy : startDate">
+			"{{ event.title }}"  at {{ event.location }} on {{ event.startDate | date }} 
+			</br>
+			{{ event.description }}
+		</li>
+	</ul>
 
-<!-- header content -->
-
-<!-- table of events -->
-
-<!-- way to display gallery of event images -->
+</div>
+<script type="text/javascript" src="eventsDirective.js"></script>

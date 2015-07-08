@@ -1,3 +1,5 @@
-// dummy javascript file
+angular
+	.module('acmApp')
+	.directive('EventsDirective', function(){});
 
-// handler for queries to orgsync API
+	
