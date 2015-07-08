@@ -10,8 +10,6 @@
             var original_height = 0;
             var height = 0;
 
-            console.log(element);
-
             $timeout(init, false);
             function init(){
                 original_height = element[0].lastElementChild.offsetHeight;
