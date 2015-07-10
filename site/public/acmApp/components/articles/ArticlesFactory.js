@@ -1,32 +1,62 @@
 (function (){
     'use strict';
 
-    angular.module('acmApp').factory('ArticlesFactory', ['$http', '$log', '$rootScope', ArticlesFactory]);
+    angular.module('acmApp').factory('ArticleFactory', ['$http', '$q', '$log', '$rootScope', ArticleFactory]);
 
-    function ArticlesFactory ($http, $log, $rootScope) {
+    function ArticleFactory ($http, $q, $log, $rootScope) {
         var factory = {};
 
-        var _articles = {};
-        var _loaded = false;
+        factory.getArticle = function (id) {
+            var deferred = $q.defer();
 
-        // Get all articles
-        factory.getArticles = function () {
-            if (_loaded) {
-                return _articles;
-            } else {
-                factory.loadArticles();
-                return {};
+            $http.get('/articles/' + id)
+                .success(function(data) {
+                    deferred.resolve(data);
+                })
+                .error(function(err) {
+                    deferred.reject(err);
+                });
+
+            return deferred.promise;
+        };
+
+        factory.saveArticle = function (article) {
+            var deferred = $q.defer();
+
+            if (article._id === "0") {
+                $http.post('/articles', article)
+                    .success(function () {
+                        deferred.resolve(true);
+                    })
+                    .error(function () {
+                        deferred.reject(false);
+                    });
+            } else { 
+                $http.put('/articles', article)
+                    .success(function () {
+                        deferred.resolve(true);
+                    })
+                    .error(function () {
+                        deferred.reject(false);
+                    });
             }
-        }
 
-        factory.loadArticles = function () {
+            return deferred.promise;
+        };
+
+        factory.getArticles = function () {
+            var deferred = $q.defer();
+
             $http.get('/articles')
                 .success(function(data) {
-                    _articles = data;
-                    _loaded = true;
-                    $rootScope.$broadcast('articlesLoaded');
+                    deferred.resolve(data);
+                })
+                .error(function(err) {
+                    deferred.reject(err);
                 });
-        }
+
+            return deferred.promise;
+        };
         
         return factory;
     }

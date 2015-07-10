@@ -14,7 +14,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
             'content@': { 
                 templateUrl: 'acmApp/components/articles/articles.html',
                 controller: 'ArticlesController as controller'
-            },
+            }
         }
     });
 
@@ -24,6 +24,21 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
         views: {
             'content': {
                 templateUrl: 'acmApp/partials/contact.html',
+            },
+            'navbar': {
+                templateUrl: 'acmApp/components/navbar/navbar.html',
+                controller: 'NavBarController'
+            }
+        }
+    });
+
+    $stateProvider.state('article_editor', {
+        url: "/article_editor",
+        params: {articleID: null},
+        views: {
+            'content': {
+                templateUrl: 'acmApp/components/articles/articleEditor/partial.html',
+                controller: 'ArticleEditorController as controller'
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',

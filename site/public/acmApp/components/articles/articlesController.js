@@ -1,20 +1,14 @@
 (function () { 
     'use strict';
 
-    angular.module('acmApp').controller('ArticlesController', ['$scope', '$log', 'ArticlesFactory', ArticlesController]);
+    angular.module('acmApp').controller('ArticlesController', ['$scope', 'ArticleFactory', ArticlesController]);
 
-    function ArticlesController ($scope, $log, ArticlesFactory) {
+    function ArticlesController ($scope, ArticlesFactory) {
         var self = this;
 
-        self.articles = {};
+        ArticlesFactory.getArticles().then(function (data) {
+            self.articles = data;
+        });
 
-        $scope.$on('articlesLoaded', loadArticles);
-
-        function loadArticles() {
-            self.articles = ArticlesFactory.getArticles();
-
-        }
-
-        ArticlesFactory.loadArticles();
     }
 })();

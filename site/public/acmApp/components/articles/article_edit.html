@@ -1,0 +1,21 @@
+<div class="articleWrapper">
+
+    <div class="articleSubject">
+        &#10097;
+            <input type="text" ng-model="controller.article.subject" />
+        &#10096;
+
+        <div class="articleAuthor">
+            <input type="text" ng-model="controller.article.author" />
+        </div>
+
+    </div>
+
+    <div class="articleCreateDate">{{ controller.article.createdDate | date }}</div>
+    <div class="articleBody">
+        <textarea ng-model="controller.article.body" style="width: 95%; height: 300px; resize: none;"></textarea>
+        <br /></br />
+
+        <button ng-click="controller.swap()">Save</button>
+    </div>
+</div>

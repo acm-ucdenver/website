@@ -1,0 +1,13 @@
+<form id="articleEditor">
+    <input type="text" ng-model="controller.article.subject" class="formHeader" />
+    <input type="text" ng-model="controller.article.author" class="formAuthor" />
+    <br />
+
+    <textarea ng-model="controller.article.body" class="formBody"></textarea>
+    <br /><br />
+
+    <div class="formButtonBar">
+        <input type="submit" value="Cancel" ng-click="controller.cancelPressed()" />
+        <input type="submit" value="Save" />
+    </div>
+</form>
