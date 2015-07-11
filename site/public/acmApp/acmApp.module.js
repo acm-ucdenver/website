@@ -4,4 +4,4 @@
 
 // add dependencies
 
-var acmApp = angular.module('acmApp', ['ui.router']);
+var acmApp = angular.module('acmApp', ['ui.router', 'ngMock']);

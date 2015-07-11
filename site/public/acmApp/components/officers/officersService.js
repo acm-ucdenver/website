@@ -1,6 +1,6 @@
 angular
   .module('acmApp')
-  .factory('officersService', ['http', officersService]);
+  .factory('officersService', ['$http', officersService]);
 
 function officersService ($http) {
   var officersEndpoint = '/officers';
