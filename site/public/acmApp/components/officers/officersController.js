@@ -6,6 +6,7 @@ function officersController(officersService) {
 
   vm = this;
   vm.allOfficers = [];
+  vm.error = false;
   vm.getAllOfficers = getAllOfficers;
 
   activate();
@@ -16,16 +17,14 @@ function officersController(officersService) {
 
   function getAllOfficers() {
     officersService.getOfficers()
-      .then()
-      .success(function(res) {
+      .then(
+      function(res) {
         vm.allOfficers = res.body;
-      })
-      .error(function(res) {
-        vm.allOfficers = [
-          {
-            name: 'error retrieving officers'
-          }
-        ];
-      });
+      },
+      function(res) {
+        vm.error = true;
+        console.log('officersController error: ' + JSON.stringify(res));
+      }
+    )
   }
 }
