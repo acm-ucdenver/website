@@ -1,4 +1,5 @@
 angular
+  .module('acmApp')
   .controller('officersController', ['officersService', officersController]);
 
 function officersController(officersService) {

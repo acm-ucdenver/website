@@ -1,4 +1,4 @@
-describe('Controller: NavBarController', function () {
+describe('Controller: navBarController', function () {
     beforeEach(module('acmApp'));
 
     var scope;
@@ -7,7 +7,7 @@ describe('Controller: NavBarController', function () {
     beforeEach(inject(function (_$rootScope_, _$controller_) {
         $rootScope = _$rootScope_;
         scope = _$rootScope_.$new();
-        _$controller_('NavBarController', {$scope: scope});
+        _$controller_('navBarController', {$scope: scope});
     }));
 
     it('should have a variable named items that has data', function () {

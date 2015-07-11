@@ -1,3 +1,3 @@
 angular
 	.module('acmApp')
-	.directive('NavBarDirective', function(){});
+	.directive('navBarDirective', function(){});

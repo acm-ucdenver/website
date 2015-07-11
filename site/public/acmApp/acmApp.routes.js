@@ -7,7 +7,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'NavBarController'
+                controller: 'navBarController'
             }
         }
     })
@@ -32,7 +32,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'NavBarController'
+                controller: 'navBarController'
             }
         }
     });

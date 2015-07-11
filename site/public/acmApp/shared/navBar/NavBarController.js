@@ -1,3 +1,3 @@
 angular
 	.module('acmApp')
-	.controller('NavBarController', function(){});
+	.controller('navBarController', function(){});
