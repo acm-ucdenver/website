@@ -1,3 +1,5 @@
+var logger = console;  //someday, a different logger..
+
 angular
   .module('acmApp')
   .controller('officersController', ['officersService', officersController]);
@@ -19,11 +21,11 @@ function officersController(officersService) {
     officersService.getOfficers()
       .then(
       function(res) {
-        vm.allOfficers = res.body;
+        vm.allOfficers = res;
       },
       function(res) {
         vm.error = true;
-        console.log('officersController error: ' + JSON.stringify(res));
+        logger.log('officersController error: ' + JSON.stringify(res));
       }
     )
   }
