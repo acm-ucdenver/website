@@ -34,7 +34,6 @@ describe('officers Integrated Controller/Service', function() {
     it('controller and service should be injected in angular', function() {
 
       expect(officersController).toBeDefined();
-      expect(officersController.toHaveProperty('allOfficers')).toBe(true);
       // if we have not yet thrown an error, then both service and controller are
       // loaded, because the controller calls the service on activate
     });
@@ -44,11 +43,12 @@ describe('officers Integrated Controller/Service', function() {
   describe('http valid tests', function() {
 
     it('getAllOfficers()', function() {
-      var data = [{ name: 'Max' }, { name: 'Min' }],
+      var data = { data: [{ name: 'Max' }, { name: 'Min' }]},
         successSpy = jasmine.createSpy('success'),
         failureSpy = jasmine.createSpy('failure');
 
       $httpBackend.expectGET(restUrl).respond($q.when(data));
+
       officersController.getAllOfficers().then(successSpy, failureSpy);
 
       $httpBackend.flush();

@@ -11,7 +11,7 @@ describe('officersController', function() {
       };
 
       function getOfficers() {
-        return $q.when([{ name: 'officer1' }, { name: 'officer2' }]);
+        return $q.when({data: [{ name: 'officer1' }, { name: 'officer2' }]});
       }
     })
   }));

@@ -18,15 +18,16 @@ function officersController(officersService) {
   }
 
   function getAllOfficers() {
-    return officersService.getOfficers()
+    var promise = officersService.getOfficers()
       .then(
-      function(res) {
-        vm.allOfficers = res;
+      function success(res) {
+        vm.allOfficers = res.data;
       },
-      function(res) {
+      function failure(res) {
         vm.error = true;
-        logger.log('officersController error: ' + JSON.stringify(res));
+        logger.log('officersController error: ' + JSON.stringify(res.data));
       }
     );
+    return promise;
   }
 }

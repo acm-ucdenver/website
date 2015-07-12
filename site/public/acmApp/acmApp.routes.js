@@ -29,7 +29,8 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
         views: {
             'content': {
                 templateUrl: 'acmApp/components/officers/officers.html',
-                controller: 'officersController'
+                controller: 'officersController',
+                controllerAs: 'officers'
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',
