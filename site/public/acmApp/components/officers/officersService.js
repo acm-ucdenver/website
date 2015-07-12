@@ -1,4 +1,8 @@
-angular
+(function() {
+  'use strict';
+
+
+  angular
   .module('acmApp')
   .factory('officersService', ['$http', officersService]);
 
@@ -14,3 +18,5 @@ function officersService ($http) {
 
   return officersService;
 }
+
+}());

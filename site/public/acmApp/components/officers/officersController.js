@@ -1,3 +1,6 @@
+(function() {
+  'use strict';
+
 var logger = console;  //someday, a different logger..
 
 angular
@@ -6,7 +9,7 @@ angular
 
 function officersController(officersService) {
 
-  vm = this;
+  var vm = this;
   vm.allOfficers = [];
   vm.error = false;
   vm.getAllOfficers = getAllOfficers;
@@ -31,3 +34,5 @@ function officersController(officersService) {
     return promise;
   }
 }
+
+}());
