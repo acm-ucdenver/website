@@ -18,7 +18,7 @@ function officersController(officersService) {
   }
 
   function getAllOfficers() {
-    officersService.getOfficers()
+    return officersService.getOfficers()
       .then(
       function(res) {
         vm.allOfficers = res;
@@ -27,6 +27,6 @@ function officersController(officersService) {
         vm.error = true;
         logger.log('officersController error: ' + JSON.stringify(res));
       }
-    )
+    );
   }
 }

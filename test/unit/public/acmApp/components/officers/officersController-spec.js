@@ -16,13 +16,12 @@ describe('officersController', function() {
     })
   }));
 
-  beforeEach(inject(function($controller, _$q_, _$httpBackend_, _$rootScope_, _officersService_) {
+  beforeEach(inject(function($controller, _$httpBackend_, _$rootScope_, _officersService_) {
     officersController = $controller('officersController', {
       officersService: _officersService_
     });
     $rootScope = _$rootScope_;
     $rootScope.$digest();
-    $q = _$q_;
   }));
 
   it('should be injected in angular', function() {
