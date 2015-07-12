@@ -7,11 +7,12 @@
         var self = this;
 
         self.savePressed = function () {
-            self.saveState = undefined;
 
             ArticleFactory.saveArticle(self.article).then(function (result) {
                 self.saveState = result;
             });
+
+            self.swap();
         }
 
         /*self.cancelPressed = function () {
