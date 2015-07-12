@@ -4,7 +4,12 @@
         <!-- Print the subject/title, author, date, and body of each article
             Does not print the "modifiedDate" or  "imgs" fields-->
         <li ng-repeat="officer in officers.allOfficers">
-            {{ officer.photo }} {{ officer.name }} on {{ officer.position }}
+            <img ng-src="officer.photo" /> <br />
+            <p>Name: {{ officer.name }}</p>
+            <p>Position: {{ officer.position }}</p>
+            <p>Year: {{ officer.year }}</p>
+            <p>Email: {{ officer.email }}</p>
+            <p>{{ officer.bio }}</p>
         </li>
     </ul>
 </div>

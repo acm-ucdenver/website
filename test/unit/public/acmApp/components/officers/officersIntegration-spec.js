@@ -17,7 +17,7 @@ describe('officers Integrated Controller/Service', function() {
   // injected because the controller calls the service as soon as it
   // is injected
   beforeEach(inject(function($controller, _officersService_) {
-    $httpBackend.expectGET(restUrl).respond($q.when({}));
+    $httpBackend.expectGET(restUrl).respond([{}]);
     officersController = $controller('officersController', {
       officersService: _officersService_
     });
@@ -36,6 +36,7 @@ describe('officers Integrated Controller/Service', function() {
       expect(officersController).toBeDefined();
       // if we have not yet thrown an error, then both service and controller are
       // loaded, because the controller calls the service on activate
+      expect(officersController.allOfficers.length).toBe(1);
     });
 
   });
@@ -43,17 +44,18 @@ describe('officers Integrated Controller/Service', function() {
   describe('http valid tests', function() {
 
     it('getAllOfficers()', function() {
-      var data = { data: [{ name: 'Max' }, { name: 'Min' }]},
+      var data = [{ name: 'Max' }, { name: 'Min' }],
         successSpy = jasmine.createSpy('success'),
         failureSpy = jasmine.createSpy('failure');
 
-      $httpBackend.expectGET(restUrl).respond($q.when(data));
+      $httpBackend.expectGET(restUrl).respond(data);
 
       officersController.getAllOfficers().then(successSpy, failureSpy);
 
       $httpBackend.flush();
 
-      expect(successSpy).toHaveBeenCalledWith(data);
+
+      expect(successSpy).toHaveBeenCalledWith({ data: data });
       expect(failureSpy).not.toHaveBeenCalled();
 
       //expect(officersController.allOfficers).not.toBe(null);
