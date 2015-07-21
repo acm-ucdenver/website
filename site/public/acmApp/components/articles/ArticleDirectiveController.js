@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('acmApp').controller('ArticleDirectiveController', ['$stateParams', '$scope', '$state', 'ArticleFactory', ArticleDirectiveController]);
+    angular.module('acmApp').controller('articleDirectiveController', ['$stateParams', '$scope', '$state', 'ArticleFactory', ArticleDirectiveController]);
 
     function ArticleDirectiveController ($stateParams, $scope, $state, ArticleFactory) {
         var self = this;

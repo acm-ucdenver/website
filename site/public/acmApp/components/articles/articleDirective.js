@@ -9,7 +9,7 @@
             scope: {
                 info: '='
             },
-            controller: 'ArticleDirectiveController as controller',
+            controller: 'articleDirectiveController as controller',
             template: '<ng-include src="controller.template" /></ng-include>'
         };
     }

@@ -13,7 +13,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
         views: {
             'content@': { 
                 templateUrl: 'acmApp/components/articles/articles.html',
-                controller: 'ArticlesController as controller'
+                controller: 'articlesController as controller'
             }
         }
     });
