@@ -10,6 +10,7 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var officers = require('./routes/officers');
 var articles = require('./routes/articles');
+var prototypes = require('./routes/prototypes');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 app.use('/officers', officers);
 app.use('/articles', articles);
+app.use('/prototypes', prototypes);
 app.use('/', routes);
 app.use('/*', routes);
 // ----------------------
