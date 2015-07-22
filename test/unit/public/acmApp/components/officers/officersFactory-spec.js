@@ -51,7 +51,7 @@ describe('officersFactory', function() {
             promise = svc.getOfficers();
             $httpBackend.flush();
             promise.then(function(res) {
-                expect(res.data[0].name).toBe('Officer Wiggum');
+                expect(res[0].name).toBe('Officer Wiggum');
             }, function() {
                 fail();
             })

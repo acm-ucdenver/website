@@ -44,22 +44,16 @@ describe('officers Integrated Controller/Service', function() {
   describe('http valid tests', function() {
 
     it('getAllOfficers()', function() {
-      var data = [{ name: 'Max' }, { name: 'Min' }],
-        successSpy = jasmine.createSpy('success'),
-        failureSpy = jasmine.createSpy('failure');
+      var data = [{ name: 'Max' }, { name: 'Min' }]
 
       $httpBackend.expectGET(restUrl).respond(data);
 
-      officersController.getAllOfficers().then(successSpy, failureSpy);
+      officersController.getAllOfficers();
 
       $httpBackend.flush();
 
+      expect(officersController.allOfficers.length).toBe(2);
 
-      expect(successSpy).toHaveBeenCalledWith({ data: data });
-      expect(failureSpy).not.toHaveBeenCalled();
-
-      //expect(officersController.allOfficers).not.toBe(null);
-      //expect(officersController.allOfficers.length).toBe(2);
     })
 
   });

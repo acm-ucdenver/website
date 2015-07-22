@@ -24,14 +24,14 @@ function officersController(officersService) {
     var promise = officersService.getOfficers()
       .then(
       function success(res) {
-        vm.allOfficers = res.data;
+        vm.allOfficers = res;
       },
       function failure(res) {
         vm.error = true;
-        logger.log('officersController error: ' + JSON.stringify(res.data));
+        logger.log('officersController error: ' + JSON.stringify(res));
       }
     );
-    return promise;
+    //return promise;
   }
 }
 

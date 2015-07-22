@@ -4,16 +4,24 @@
 
   angular
   .module('acmApp')
-  .factory('officersService', ['$http', officersService]);
+  .factory('officersService', ['$http', '$q', officersService]);
 
-function officersService ($http) {
+function officersService ($http, $q) {
   var officersEndpoint = '/officers';
   var officersService = {
     getOfficers: getOfficers
   };
 
   function getOfficers() {
-    return $http.get(officersEndpoint);
+    var deferred = $q.defer();
+    $http.get(officersEndpoint)
+      .success(function(data) {
+        deferred.resolve(data);
+      })
+      .error(function(err) {
+        deferred.reject(err);
+      });
+    return deferred.promise;
   }
 
   return officersService;
