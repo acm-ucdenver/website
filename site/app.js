@@ -10,7 +10,11 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var officers = require('./routes/officers');
 var articles = require('./routes/articles');
+<<<<<<< HEAD
 var events = require('./routes/events');
+=======
+var prototypes = require('./routes/prototypes');
+>>>>>>> 603fccf24c324cf52e64c4051ece287665d35760
 
 var app = express();
 
@@ -44,7 +48,11 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 app.use('/officers', officers);
 app.use('/articles', articles);
+<<<<<<< HEAD
 app.use('/events', events);
+=======
+app.use('/prototypes', prototypes);
+>>>>>>> 603fccf24c324cf52e64c4051ece287665d35760
 app.use('/', routes);
 app.use('/*', routes);
 // ----------------------
