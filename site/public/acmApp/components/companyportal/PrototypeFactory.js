@@ -12,6 +12,7 @@
             $http.get('http://localhost:3000/prototypes')
             .success(function (data) {
                     deferred.resolve(data);
+                    console.log(data);
                 })
                 .error(function (err) {
                     deferred.reject(err);

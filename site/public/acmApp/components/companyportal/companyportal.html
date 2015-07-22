@@ -1,3 +1,17 @@
 <div ng-repeat="prototype in controller.prototypes">
-    {{prototype}}
-</div>
+    <h3>{{prototype.event}}</h3>
+    <img ng-src="prototype.img" /><br />
+    {{prototype.cost | currency}}<br />
+    Activities:
+    <ul>
+        <li ng-repeat="activity in prototype.activities">
+            {{activity.name}}
+        </li>
+    </ul>
+    Expenses:
+    <ul>
+        <li ng-repeat="expense in prototype.expenses">
+            {{expense.name}}
+        </li>
+    </ul>
+</div><br/><br/>

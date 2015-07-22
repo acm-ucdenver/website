@@ -9,10 +9,12 @@
         self.prototypes = {};
 
         function init () {
-            prototypeFactory.getAllPrototypes.then(function (data) {
+            prototypeFactory.getAllPrototypes().then(function (data) {
                 self.prototypes = data;
             });
         }
+
+        init();
     }
 
 })();
