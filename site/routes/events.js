@@ -11,15 +11,26 @@ app.use(bodyParser.json());
 
 /* '/events' API */
 router.route('/')
+    /* -- Uncomment for testing
+    .get(function (req, res, next) {
+        Event.find(function(err, events) {
+            if (err)
+                res.send(err);
+
+            res.json(events);
+        });
+    })*/
+
     .post(function (req, res, next) {
         var event = new Event();
 
-        officer.name = req.body.name;
-        officer.position = req.body.position;
-        officer.email = req.body.email;
-        officer.photo = req.body.photo;
-        officer.year = req.body.year;
-        officer.bio = req.body.bio;
+        event.title = req.body.title;
+        event.startDate = req.body.startDate;
+        event.endDate = req.body.endDate;
+        event.description = req.body.description;
+        event.location = req.body.location;
+        event.rsvp = req.body.rsvp;
+        event.imgs = req.body.imgs;
 
         event.save(function (err) {
             if (err)
@@ -36,14 +47,15 @@ router.route('/:id')
             if (err)
                 res.send(err);
 
-            officer.name = req.body.name;
-            officer.position = req.body.position;
-            officer.email = req.body.email;
-            officer.photo = req.body.photo;
-            officer.year = req.body.year;
-            officer.bio = req.body.bio;
+            event.title = req.body.title;
+            event.startDate = req.body.startDate;
+            event.endDate = req.body.endDate;
+            event.description = req.body.description;
+            event.location = req.body.location;
+            event.rsvp = req.body.rsvp;
+            event.imgs = req.body.imgs;
 
-            officer.save(function (err) {
+            event.save(function (err) {
                 if (err)
                     return err;
 
