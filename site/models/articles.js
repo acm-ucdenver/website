@@ -1,4 +1,4 @@
-// models/announcement.js
+// models/articles.js
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
