@@ -54,12 +54,29 @@ router.route('/:id')
             if (err)
                 res.send(err);
 
-            prototype.event = req.body.event;
-            prototype.img = req.body.img;
-            prototype.description = req.body.description;
-            prototype.activites = req.body.activities;
-            prototype.expenses = req.body.expenses;
-            prototype.cost = req.body.cost;
+            if (typeof req.body.event !== 'undefined') {
+                prototype.event = req.body.event;
+            }
+
+            if (typeof req.body.img !== 'undefined') {
+                prototype.img = req.body.img;
+            }
+
+            if (typeof req.body.description !== 'undefined') {
+                prototype.description = req.body.description;
+            }
+
+            if (typeof req.body.activities !== 'undefined') {
+                prototype.activites = req.body.activities;
+            }
+
+            if (typeof req.body.expenses !== 'undefined') {
+                prototype.expenses = req.body.expenses;
+            }
+
+            if (typeof req.body.cost !== 'undefined') {
+                prototype.cost = req.body.cost;
+            }
 
             prototype.save(function (err) {
                 if (err)
