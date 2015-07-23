@@ -1,3 +1,3 @@
 angular
-	.module('acmApp')
-	.controller('EventsController', function(){});
+    .module('acmApp')
+    .controller('eventsController', function(){});

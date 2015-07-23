@@ -7,7 +7,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'NavBarController'
+                controller: 'navBarController'
             }
         }
     })
@@ -39,11 +39,13 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
         url: "/contact",
         views: {
             'content': {
-                templateUrl: 'acmApp/partials/contact.html',
+                templateUrl: 'acmApp/components/officers/officers.html',
+                controller: 'officersController',
+                controllerAs: 'officers'
             },
             'navbar': {
                 templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'NavBarController'
+                controller: 'navBarController'
             }
         }
     });

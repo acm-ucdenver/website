@@ -1,6 +1,6 @@
 angular
 	.module('acmApp')
-	.controller('ArticlesController', ['$scope', '$http', function($scope, $http){
+	.controller('articlesController', ['$scope', '$http', function($scope, $http){
 		// Get all articles
 		$http.get('/articles')
 	        .success(function(data) {

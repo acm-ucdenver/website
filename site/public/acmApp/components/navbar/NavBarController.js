@@ -1,4 +1,4 @@
-acmApp.controller('NavBarController', ['$scope', function ($scope) {
+acmApp.controller('navBarController', ['$scope', function ($scope) {
     $scope.items = [
                         {
                             title: "Main",
