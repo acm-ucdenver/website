@@ -11,7 +11,7 @@ npm install
 cd ..
 
 echo 'Installing node project packages'
-cd site
+cd src
 npm install
 
 echo 'Installing web framework packages'
