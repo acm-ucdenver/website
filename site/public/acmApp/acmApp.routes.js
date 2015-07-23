@@ -1,14 +1,17 @@
 acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
+    var navbar = {
+        templateUrl: 'acmApp/components/navbar/navbar.html',
+        controller: 'navBarController'
+    };
+
+
     $stateProvider.state('index', {
         url: "",
         views: {
             'content': { 
                 templateUrl: 'acmApp/partials/index.html',
             },
-            'navbar': {
-                templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'navBarController'
-            }
+            'navbar': navbar
         }
     })
     .state('index.main', {
@@ -29,10 +32,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
                 templateUrl: 'acmApp/components/companyportal/companyportal.html',
                 controller: 'companyPortalController as controller'
             },
-            'navbar': {
-                templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'NavBarController'
-            }
+            'navbar': navbar
         }
     })
     .state('contact', {
@@ -43,10 +43,7 @@ acmApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $
                 controller: 'officersController',
                 controllerAs: 'officers'
             },
-            'navbar': {
-                templateUrl: 'acmApp/components/navbar/navbar.html',
-                controller: 'navBarController'
-            }
+            'navbar': navbar
         }
     });
 
