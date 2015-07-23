@@ -1,3 +1,3 @@
 angular
 	.module('acmApp')
-	.directive('EventsDirective', function(){});
+	.directive('eventsDirective', function(){});

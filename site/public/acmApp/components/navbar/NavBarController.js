@@ -5,6 +5,10 @@ acmApp.controller('NavBarController', ['$scope', function ($scope) {
                             state: "index.main"
                         },
                         {
+                            title: "Company Portal",
+                            state: "companyportal"
+                        },
+                        {
                             title: "Contact",
                             state: "contact"
                         }
