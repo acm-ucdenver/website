@@ -16,7 +16,7 @@
             $q = _$q_;
 
             $httpBackend
-                .whenGET('http://localhost:3000/prototypes')
+                .whenGET('/prototypes')
                 .respond({
                             "stuff": [
                                 { "data": "some data" },

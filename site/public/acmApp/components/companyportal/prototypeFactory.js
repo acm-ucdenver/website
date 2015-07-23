@@ -9,7 +9,7 @@
         factory.getAllPrototypes = function () {
             var deferred = $q.defer();
 
-            $http.get('http://localhost:3000/prototypes')
+            $http.get('/prototypes')
             .success(function (data) {
                     deferred.resolve(data);
                 })
