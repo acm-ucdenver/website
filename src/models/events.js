@@ -1,4 +1,4 @@
-// models/officer.js
+// models/event.js
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -9,11 +9,7 @@ var EventSchema = new Schema({
     description: String,
     location: String,
     rsvp: Boolean,
-    imgs: [
-        {
-            src: String
-        }
-    ]
+    imgs: [ { src: String } ]
 });
 
 module.exports = mongoose.model('Event', EventSchema);

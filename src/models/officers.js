@@ -1,4 +1,4 @@
-// models/officer.js
+// models/officers.js
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

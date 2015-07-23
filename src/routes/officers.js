@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var Officer = require('../models/officer');
+var Officer = require('../models/officers');
 
 var app = express();
 

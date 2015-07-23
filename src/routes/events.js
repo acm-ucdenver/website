@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var Event = require('../models/event');
+var Event = require('../models/events');
 
 var app = express();
 

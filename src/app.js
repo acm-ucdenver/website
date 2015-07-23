@@ -41,7 +41,7 @@ app.use(logger('combined', {stream: accessLogStream}));
 // ----------------------
 
 
-// Routes (a few examples, we will remove these)
+// Routes
 // ----------------------
 app.use('/officers', officers);
 app.use('/articles', articles);
