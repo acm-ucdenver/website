@@ -69,8 +69,9 @@ router.route('/:id')
 					res.json({message: 'Success'});
 				});
 			}
-
-			res.json({error:"Project does not exist"});
+			else{
+				res.json({error:"Project does not exist"});
+			}
 		});
 	})
 
