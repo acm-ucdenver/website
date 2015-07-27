@@ -1,0 +1,39 @@
+doctype html
+html(ng-app="acmApp")
+    head
+        title= title
+        base(href="/")
+
+        //- CSS
+        link(rel='stylesheet', href='/css/app.css')
+        link(rel='stylesheet', href='/js/bower_components/bootstrap/dist/css/bootstrap.css')
+
+    body
+        
+        block content
+        
+        //- Libraries
+        script(src='/js/bower_components/angular/angular.js')
+        script(src='/js/bower_components/angular-ui-router/release/angular-ui-router.js')
+
+        //- App
+        script(src='/acmApp/acmApp.module.js')
+        script(src='/acmApp/acmApp.config.js')
+        script(src='/acmApp/acmApp.routes.js')
+
+        //- NavBar
+        script(src='/acmApp/components/navbar/navBarController.js')
+
+        //- Articles
+        script(src='/acmApp/components/articles/articlesController.js')
+
+        //- Events
+        script(src='/acmApp/components/events/eventsController.js')
+
+        //- Contact
+        script(src="/acmApp/components/officers/officersService.js")
+        script(src="/acmApp/components/officers/officersController.js")
+
+        //- Company Portal
+        script(src='/acmApp/components/companyportal/companyPortalController.js')
+        script(src='/acmApp/components/companyportal/prototypeFactory.js')

@@ -37,13 +37,16 @@ else [ $UNAME == "Linux" ]
 fi
 
 echo 'Installing Karma'
-sudo npm install karma -g
+sudo npm install karma-cli -g
 
 echo 'Installing Protractor'
 sudo npm install protractor -g
 
 echo 'Installing Bower'
 sudo npm install bower -g
+
+echo 'Installing PhantomJS'
+sudo npm install phantomjs
 
 echo 'Updating Selenium Webserver'
 sudo webdriver-manager update

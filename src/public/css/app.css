@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+    overflow-y: hidden;
+}
+body {
+    height: 100%;
+}
+
+.content {
+    width: 80%;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+
+}

@@ -1,0 +1,28 @@
+.acmnavbar {
+    padding-left: 50px;
+    height: 25px;
+    width: 100%;
+    background: gray;
+    background: -webkit-linear-gradient(white, gray);
+    background: -o-linear-gradient(white, gray);
+    background: -moz-linear-gradient(white, gray);
+    background: linear-gradient(white, gray);
+    border-bottom: 1px solid black;
+}
+
+.navitem {
+    font-size: 18px;
+    display: inline-block;
+    height: 25px;
+    width: 130px;
+    background: -webkit-linear-gradient(white, gray);
+    background: -o-linear-gradient(white, gray);
+    background: -moz-linear-gradient(white, gray);
+    background: linear-gradient(white, gray);
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    text-align: center;
+    vertical-align: center;
+    cursor: pointer;
+}
