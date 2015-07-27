@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 
 /* '/events' API */
 router.route('/')
-    /* -- Uncomment for testing
     .get(function (req, res, next) {
         Event.find(function(err, events) {
             if (err)
@@ -19,7 +18,7 @@ router.route('/')
 
             res.json(events);
         });
-    })*/
+    })
 
     .post(function (req, res, next) {
         var event = new Event();
@@ -42,6 +41,15 @@ router.route('/')
 
 /* '/events/:id' API */
 router.route('/:id')
+    .get(function(req, res, next) {
+        Event.findById(req.params.id, function(err, event) {
+            if(err)
+               res.send(err);
+
+            res.json(event);
+        });
+    })
+
     .put(function (req, res, next) {
         Event.findById(req.params.id, function (err, event) {
             if (err)
