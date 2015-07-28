@@ -12,6 +12,7 @@ var officers = require('./routes/officers');
 var articles = require('./routes/articles');
 var events = require('./routes/events');
 var prototypes = require('./routes/prototypes');
+var members = require('./routes/members');
 
 var app = express();
 
@@ -47,6 +48,7 @@ app.use('/officers', officers);
 app.use('/articles', articles);
 app.use('/events', events);
 app.use('/prototypes', prototypes);
+app.use('/members', members);
 app.use('/', routes);
 app.use('/*', routes);
 // ----------------------
