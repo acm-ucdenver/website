@@ -15,9 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        '../site/public/js/bower_components/angular/angular.min.js',
+        '../src/public/js/bower_components/angular/angular.js',
+        '../src/public/js/bower_components/angular-ui-router/release/angular-ui-router.js',
         'node_modules/angular-mocks/angular-mocks.js',
-        '../site/public/acmApp/**/*.js',
+        'unit/public/acmApp/acmApp-debug.js',
+        '../src/public/acmApp/**/*.js',
         'unit/public/acmApp/**/*-spec.js'
     ],
 

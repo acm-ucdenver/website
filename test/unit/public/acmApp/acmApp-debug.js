@@ -1,0 +1,1 @@
+var acmApp = angular.module('acmApp', ['ui.router', 'ngMock']);
