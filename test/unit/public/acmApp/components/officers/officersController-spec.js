@@ -37,7 +37,6 @@ describe('officersController', function() {
       expect(officersController.allOfficers[1].name).toBe('officer2');
     });
 
-
   });
 
 });
