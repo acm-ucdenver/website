@@ -55,7 +55,30 @@ describe('officersFactory', function() {
             }, function() {
                 fail();
             })
-        })
+        });
+
+        it('should make a POST call to /officers when saveOfficer is called without an id set', function() {
+            $httpBackend.expectPOST(restUrl).respond('success');
+            var promise = svc.saveOfficer({name: "Test Officer"});
+            $httpBackend.flush();
+            promise.then(function(res) {
+                expect(res).toBe(true);
+            }), function () {
+                fail();
+            }
+        });
+
+        it('should make a PUT call to /officers/:id when saveOfficer is called with an _id set', function() {
+            $httpBackend.expectPUT(restUrl + '/123456').respond('success');
+            var promise = svc.saveOfficer({_id: "123456", name: "Test Officer"});
+            $httpBackend.flush();
+            promise.then(function(res) {
+                expect(res).toBe(true);
+            }), function () {
+                fail();
+            }
+            
+        });
 
     })
 
