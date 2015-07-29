@@ -6,13 +6,9 @@
     function Routes ($stateProvider) {
         // Views
         // --------------------------------------------------
-        var index = {
-            templateUrl: 'acmApp/partials/index.html'
-        };
-
         var navbar = {
             templateUrl: 'acmApp/components/navbar/navbar.html',
-            controller: 'navBarController'
+            controller: 'navBarController as controller'
         };
 
         var companyportal = {
@@ -25,33 +21,24 @@
         };
 
         var articles = {
-            templateUrl: 'acmApp/components/articles/articles.html'
+            templateUrl: 'acmApp/components/articles/articles.html',
+            controller: 'articlesController as controller'
         };
 
         var officers = {
             templateUrl: 'acmApp/components/officers/officers.html',
-            controller: 'officersController as officers'
+            controller: 'officersController as controller'
         };
 
         // Routes
         // --------------------------------------------------
         var routeIndex = {
             name: 'index',
-            url: '',
+            url: '/',
             views: {
-                'content': index,
+                'content': articles,
                 'navbar': navbar
             }
-        };
-
-        var routeIndexMain = {
-            name: 'index.main',
-            url: '/index',
-            views: {
-                'events': events,
-                'articles': articles
-            }
-
         };
 
         var routeCompanyPortal = {
@@ -77,7 +64,6 @@
         // --------------------------------------------------
         $stateProvider
             .state(routeIndex)
-            .state(routeIndexMain)
             .state(routeCompanyPortal)
             .state(routeContact);
     }

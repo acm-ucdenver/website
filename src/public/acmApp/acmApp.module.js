@@ -1,5 +1,5 @@
 (function () {
     'use strict';
 
-    angular.module('acmApp', ['ui.router']);
+    angular.module('acmApp', ['ui.router', 'ngAnimate']);
 })();

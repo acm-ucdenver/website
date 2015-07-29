@@ -1,14 +1,16 @@
 (function () {
     'use strict';
 
-    angular.module('acmApp').controller('navBarController', ['$scope', NavBarController]);
+    angular.module('acmApp').controller('navBarController', [NavBarController]);
 
-    function NavBarController ($scope) {
-        $scope.items =
+    function NavBarController () {
+        var self = this;
+
+        self.items =
         [
             {
                 title: "Main",
-                state: "index.main"
+                state: "index"
             },
             {
                 title: "Company Portal",
