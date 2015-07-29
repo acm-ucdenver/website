@@ -1,8 +1,8 @@
 html {
     height: 100%;
     width: 100%;
-    overflow-y: hidden;
 }
+
 body {
     height: 100%;
     width: 100%;
@@ -14,13 +14,12 @@ body {
     height: 100%;
 
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 200px;
     padding-top: 50px;
 
     margin-left: auto;
     margin-right: auto;
 
-    height: 100%;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    height: calc(100%-30px);
+
 }
