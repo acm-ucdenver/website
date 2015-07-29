@@ -1,17 +1,25 @@
 html {
     height: 100%;
-    overflow-y: hidden;
+    width: 100%;
 }
+
 body {
     height: 100%;
+    width: 100%;
+    font-family: 'Lora', serif;
 }
 
 .content {
-    width: 80%;
-    padding-left: auto;
-    padding-right: auto;
+    width: 1000px;
+    height: 100%;
+
+    padding-left: 30px;
+    padding-right: 200px;
+    padding-top: 50px;
+
     margin-left: auto;
     margin-right: auto;
-    height: 80%;
+
+    height: calc(100%-30px);
 
 }

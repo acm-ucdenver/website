@@ -1,17 +1,26 @@
-<div ng-repeat="prototype in controller.prototypes">
-    <h3>{{prototype.event}}</h3>
-    <img ng-src="prototype.img" /><br />
-    {{prototype.cost | currency}}<br />
-    Activities:
-    <ul>
-        <li ng-repeat="activity in prototype.activities">
-            {{activity.name}}
-        </li>
-    </ul>
-    Expenses:
-    <ul>
-        <li ng-repeat="expense in prototype.expenses">
-            {{expense.name}}
-        </li>
-    </ul>
-</div><br/><br/>
+<h3>Why We Love Colorado Tech Companies</h3>
+<p>
+ACM is always looking for companies to get involved with computer science students at UC Denver. We know that students are looking for internships while they are in school and jobs once they graduate. We also know companies are always looking for smart and motivated young developers to work for their companies. With this in mind, we have created a handful of events to foster this relationship. Below are a few ideas for ways your company can get involved. Email us now and get the process rolling!
+</p>
+<br/><br/>
+<div ng-repeat="prototype in controller.prototypes" class="prototype" ng-init="prototype.show = false">
+    <div class="proto-header">{{prototype.event}}</div>
+    <img ng-hide="prototype.img == 'null'" ng-src="prototype.img" />
+    <div class="proto-content">{{prototype.description}}
+
+        <div ng-hide="prototype.show" ng-click="prototype.show = !prototype.show" class="proto-show">Show More</div>
+
+        <div class="proto-extra" ng-show="prototype.show" ng-animate="'animate'">
+            Expected Cost: {{prototype.cost | currency}}<br />
+            <div ng-repeat="expense in prototype.expenses" class="proto-expense">
+                {{expense.name}}
+            </div>
+            <br />Possible Activities:
+            <div ng-repeat="activity in prototype.activities" class="proto-activity">
+                {{activity.name}}
+            </div>
+            <div ng-click="prototype.show = !prototype.show" class="proto-show">Show Less</div>
+        </div>
+
+    </div>
+</div>

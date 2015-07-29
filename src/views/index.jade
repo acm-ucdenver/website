@@ -1,9 +1,5 @@
 extends layout
 
 block content
-    script.
-        window.location.assign("/#/index")
-    h1= title
-    p Welcome to #{title}
-    div(ui-view="navbar" class="navbar")
+    div(ui-view="navbar" id="navbar")
     div(ui-view="content" class="content")

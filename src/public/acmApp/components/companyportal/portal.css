@@ -1,0 +1,62 @@
+.prototype {
+    margin-bottom: 20px;
+}
+
+.proto-content {
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+.proto-header {
+    font-size: 18px;
+}
+
+.proto-show {
+    font-size: 10px;
+
+    float: right;
+
+    cursor: pointer;
+}
+
+.proto-activity,
+.proto-expense {
+    padding-left: 20px;
+}
+
+.proto-extra {
+    padding-top: 10px;
+    padding-left: 40px;
+}
+ 
+.ng-hide-add {
+    animation: 0.5s fade-out ease-out;
+}
+ 
+.ng-hide-remove {
+    animation: 0.5s fade-in ease-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        height: 0%;
+    }
+
+    to {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        height: 100%;
+    }
+
+    to {
+        opacity: 0;
+        height: 0%;
+    }
+}
