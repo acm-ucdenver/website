@@ -19,10 +19,11 @@ not sure where to start?
 ```
     bash setupGlobals.sh # on mac
 ```
-* run the setupComponents.sh script (installs package dependencies within the site directories)
+
+* run the npm install script (installs package dependencies within the site directories)
 
 ```
-    bash setupComponents.sh # on mac
+    npm install # installs bower dependencies too
 ```
 * get mongo running
 
@@ -31,11 +32,12 @@ not sure where to start?
     mkdir -p data/db
     mongod # leave running in it's own console
 ```
-* run the startExpressServer.sh script
+* start the server
 
 ```
-    bash startExpressServer.sh # leave running in it's own console
+    npm start
 ```
+
 * open a browser and connect to the site
 
 ```
