@@ -17,7 +17,8 @@ module.exports = function(config) {
     files: [
         '../src/public/js/bower_components/angular/angular.js',
         '../src/public/js/bower_components/angular-ui-router/release/angular-ui-router.js',
-        'node_modules/angular-mocks/angular-mocks.js',
+        '../src/public/js/bower_components/angular-animate/angular-animate.js',
+        '../node_modules/angular-mocks/angular-mocks.js',
         'unit/public/acmApp/acmApp-debug.js',
         '../src/public/acmApp/**/*.js',
         'unit/public/acmApp/**/*-spec.js'
