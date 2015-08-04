@@ -1,28 +1,60 @@
-.acmnavbar {
-    padding-left: 50px;
-    height: 25px;
+#navbar {
+    height: 30px;
     width: 100%;
-    background: gray;
-    background: -webkit-linear-gradient(white, gray);
-    background: -o-linear-gradient(white, gray);
-    background: -moz-linear-gradient(white, gray);
-    background: linear-gradient(white, gray);
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    margin: 0px;
+
+    background: #8ae;
     border-bottom: 1px solid black;
+    box-shadow: 0px 3px 3px #888;
+}
+
+#acmnavbar {
+    height: 29px;
+
+    float: right;
+
+    padding: 0px;
+    padding-right: 100px;
+}
+
+#header {
+    display: inline-block;
+
+    top: 0px;
+
+    font-weight: bold;
+
+    padding-top: 4px;
+
+    float: left;
+    padding-left: 100px;
 }
 
 .navitem {
-    font-size: 18px;
+    font-size: 14px;
+
     display: inline-block;
-    height: 25px;
-    width: 130px;
-    background: -webkit-linear-gradient(white, gray);
-    background: -o-linear-gradient(white, gray);
-    background: -moz-linear-gradient(white, gray);
-    background: linear-gradient(white, gray);
-    border-left: 1px black solid;
-    border-right: 1px black solid;
-    border-bottom: 1px black solid;
+
+    height: 29px;
+    width: auto;
+
+    top: 0px;
+
+    padding-top: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+
     text-align: center;
     vertical-align: center;
+
     cursor: pointer;
+}
+
+.navitem:hover {
+    background-color: #acf;
 }
